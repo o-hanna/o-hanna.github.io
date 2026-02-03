@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}}</title>
+    {{META_TAGS}}
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="sidebar">
+            <div class="profile-section">
+                <div class="profile-img-container">
+                    <img src="../profile.jpg" alt="Osama Hanna" class="profile-img">
+                </div>
+                <h1>Osama Hanna</h1>
+                <nav class="nav-links">
+                    <a href="../index.html" class="nav-item"><i class="fas fa-arrow-left"></i> Back to Home</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="section">
+                <h2 class="paper-title-large">{{TITLE}}</h2>
+                <p class="paper-meta">
+                    <span class="paper-authors">{{AUTHORS}}</span>
+                    <br>
+                    <span class="paper-venue">{{VENUE}}</span>
+                </p>
+                
+                <div class="paper-actions-row">
+                    {{PDF_BUTTON}}
+                    <button class="btn-action" onclick="toggleBibtex('bib-detail')">Cite</button>
+                </div>
+
+                <div id="bib-detail" class="bibtex-hidden">{{BIBTEX}}</div>
+
+                <div class="card abstract-card">
+                    <h3>Abstract</h3>
+                    <p>{{ABSTRACT}}</p>
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <p>&copy; 2026 Osama Hanna.</p>
+            </footer>
+        </main>
+    </div>
+    <script>
+        function toggleBibtex(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
