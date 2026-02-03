@@ -575,6 +575,24 @@ body {
     margin-top: 0.5rem;
 }
 
+/* Custom Scrollbar for Sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    border-radius: 4px;
+    border: 2px solid var(--bg-color);
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-secondary);
+}
 /* Optional: Adds space between the list items */
 .talk-item {
     margin-bottom: 0.5rem;
