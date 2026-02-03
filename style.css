@@ -34,16 +34,17 @@ body {
 
 /* Sidebar */
 .sidebar {
-    width: 380px;          /* Wider to fit the large photo */
+    width: 380px;
     position: fixed;
     height: 100vh;
-    padding: 3rem 2rem;
+    padding: 2rem;           /* Reduced padding slightly to save space */
     border-right: 1px solid var(--border);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: var(--bg-color); /* Ensures content doesn't show behind */
+    justify-content: flex-start; /* changed from center to avoid clipping top */
+    background-color: var(--bg-color);
     z-index: 10;
+    overflow-y: auto;        /* Enable vertical scroll independent of main page */
 }
 
 /* Profile Image */
