@@ -476,15 +476,6 @@ body {
 .abstract-card { margin-top: 2rem; }
 .abstract-card h3 { margin-bottom: 1rem; font-family: var(--font-mono); color: var(--accent); }
 
-
-.experience-box {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    margin-bottom: 1.5rem;
-    padding: 0;
-}
-
 /* --- Experience & Education (Clean List View) --- */
 
 .experience-box {
@@ -500,7 +491,7 @@ body {
     padding: 2rem 0;           /* Vertical spacing only */
     border: none;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     border-radius: 0;
 }
 
@@ -518,7 +509,7 @@ body {
 /* Pull items closer to the header */
 #experience .section-title,
 #education .section-title {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Remove extra space above the VERY FIRST item in the list */
