@@ -714,3 +714,72 @@ body {
         height: 180px;
     }
 }
+
+/* --- Split Intro Section --- */
+.intro-section {
+    padding-top: 120px; /* Space for fixed navbar */
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 3rem;
+}
+
+.intro-container {
+    display: grid;
+    grid-template-columns: 350px 1fr; /* Fixed width for profile, rest for text */
+    gap: 4rem;
+    align-items: start; /* Aligns to top so bio text flows naturally */
+}
+
+/* Left Column Styling */
+.intro-profile {
+    text-align: center;
+    position: sticky; /* Optional: Keeps photo in view if bio is very long */
+    top: 100px;
+}
+
+.intro-profile .profile-img-container {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.intro-profile h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+/* Right Column Styling */
+.intro-bio {
+    flex: 1;
+}
+
+.bio-card {
+    border: none;       /* Removes border for a cleaner look */
+    background: none;   /* Removes background color so it blends in */
+    padding: 0;         /* Removes padding so it aligns with headers */
+}
+
+.bio-card p {
+    font-size: 1.05rem; /* Slightly larger text for readability */
+    color: #c9d1d9;
+}
+
+/* Mobile: Stack them */
+@media (max-width: 900px) {
+    .intro-container {
+        grid-template-columns: 1fr; /* Stack vertically */
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .intro-profile {
+        position: static; /* Disable sticky on mobile */
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 2rem;
+    }
+
+    .intro-bio {
+        text-align: left; /* Keep text readable */
+    }
+}
