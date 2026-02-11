@@ -485,9 +485,19 @@ body {
     padding: 0;
 }
 
+/* --- Experience & Education (Clean List View) --- */
+
+.experience-box {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;   /* Reduced from 1.5rem */
+    padding: 0;
+}
+
 .experience-card {
     background: transparent;
-    padding: 2rem 0;           /* Vertical spacing only, aligns flush left/right */
+    padding: 2rem 0;           /* Vertical spacing only */
     border: none;
     border-bottom: 1px solid var(--border);
     margin-bottom: 0;
@@ -496,4 +506,22 @@ body {
 
 .experience-card:last-child {
     border-bottom: none;
+}
+
+/* --- Layout Tweaks --- */
+
+/* Reduce gap between Experience and Education */
+#experience {
+    margin-bottom: 1rem; 
+}
+
+/* Pull items closer to the header */
+#experience .section-title,
+#education .section-title {
+    margin-bottom: 1rem;
+}
+
+/* Remove extra space above the VERY FIRST item in the list */
+.experience-card:first-child {
+    padding-top: 0;
 }
