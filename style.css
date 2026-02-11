@@ -617,7 +617,7 @@ body {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
-    padding: 1rem 2rem;
+    padding: 0.6rem 2rem;
 }
 
 .nav-container {
@@ -653,7 +653,7 @@ body {
 
 /* 3. Hero Section (Identity) */
 .hero {
-    padding-top: 120px; /* Space for navbar */
+    padding-top: 90px; /* Space for navbar */
     padding-bottom: 0.5rem;
     text-align: center;
     background: radial-gradient(circle at center top, #1c2128 0%, var(--bg-color) 70%);
