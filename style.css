@@ -488,7 +488,7 @@ body {
 
 .experience-card {
     background: transparent;
-    padding: 1.5rem 0;           /* Vertical spacing only */
+    padding: 0.5rem 0;           /* Vertical spacing only */
     border: none;
     border-bottom: 1px solid var(--border);
     margin-bottom: 0;
