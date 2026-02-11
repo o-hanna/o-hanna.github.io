@@ -598,3 +598,119 @@ body {
 .talk-item {
     margin-bottom: 0.5rem;
 }
+
+/* --- New Top-Nav Layout --- */
+
+/* 1. Reset Container */
+.container {
+    display: block; /* Removed flex */
+    max-width: 100%;
+}
+
+/* 2. Top Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 17, 21, 0.95); /* Dark semi-transparent */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+/* 3. Hero Section (Identity) */
+.hero {
+    padding-top: 140px; /* Space for navbar */
+    padding-bottom: 4rem;
+    text-align: center;
+    background: radial-gradient(circle at center top, #1c2128 0%, var(--bg-color) 70%);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Ensure Profile Image centers correctly */
+.profile-img-container {
+    margin: 0 auto 1.5rem auto; /* Centers the circle */
+    width: 250px; /* Good size for hero */
+    height: 250px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.role {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.role-sub {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+/* 4. Main Content Area */
+.main-container {
+    max-width: 900px; /* The "Reading Sweet Spot" */
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Mobile Responsiveness for Nav */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hide links on very small screens for simplicity, or add a hamburger menu later */
+    }
+    .hero {
+        padding-top: 100px;
+    }
+    .profile-img-container {
+        width: 180px;
+        height: 180px;
+    }
+}
