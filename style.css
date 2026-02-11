@@ -24,590 +24,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* --- Layout --- */
-.container {
-    display: flex;
-    max-width: 100%;       /* Full width */
-    margin: 0 auto;
-    min-height: 100vh;
-}
-
-/* Sidebar */
-.sidebar {
-    width: 380px;
-    position: fixed;
-    height: 100vh;
-    padding: 2rem;           /* Reduced padding slightly to save space */
-    border-right: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* changed from center to avoid clipping top */
-    background-color: var(--bg-color);
-    z-index: 10;
-    overflow-y: auto;        /* Enable vertical scroll independent of main page */
-}
-
-/* Profile Image */
-.profile-img-container {
-    width: 300px;          /* Large size */
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: var(--card-bg);
-    margin: 0 auto 2rem auto;
-    border: 4px solid var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.sidebar h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
-.role {
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 1rem;
-    text-align: center;
-}
-
-.role-sub {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 0rem;
-    align-items: center; /* Center the links */
-}
-
-.nav-item {
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-.nav-item:hover, .nav-item.active {
-    color: var(--text-primary);
-    font-weight: 500;
-}
-
-.social-links {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-bottom: 2.5rem;
-}
-
-.social-links a {
-    color: var(--text-secondary);
-    font-size: 1.4rem;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: var(--accent);
-}
-
-/* --- Main Content --- */
-.content {
-    margin-left: 380px;    /* Match sidebar width */
-    flex: 1;
-    padding: 4rem 6rem;    /* Generous padding for wide screens */
-    max-width: 1600px;     /* Prevent text from getting unreadably wide */
-}
-
-.section {
-    margin-bottom: 5rem;
-    scroll-margin-top: 4rem;
-}
-
-.section-title {
-    font-size: 1.5rem;
-    border-bottom: 2px solid var(--border);
-    padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
-    color: var(--text-primary);
-    font-family: var(--font-mono);
-}
-
-.card {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-}
-
-.card p {
-    margin-bottom: 1rem;
-    color: #c9d1d9;
-}
-
-.card strong {
-    color: var(--text-primary);
-}
-
-.card a {
-    color: var(--accent);
-    text-decoration: none;
-}
-
-/* Grid for Interests */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Slightly wider cards */
-    gap: 1.5rem;
-}
-
-.grid-item {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    transition: transform 0.2s, border-color 0.2s;
-}
-
-.grid-item:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-}
-
-.grid-item i {
-    font-size: 2rem;
-    color: var(--accent);
-    margin-bottom: 1rem;
-}
-
-.grid-item h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.grid-item p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
-
-/* Publications */
-.pub-card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.pub-content {
-    flex: 1;
-    min-width: 300px;
-}
-
-.pub-content h4 {
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
-    color: var(--text-primary);
-}
-
-.pub-title-link {
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.pub-title-link:hover {
-    color: var(--accent);
-}
-
-.authors {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    margin-bottom: 0.3rem;
-}
-
-.venue {
-    font-size: 0.9rem;
-    color: var(--accent);
-    font-style: italic;
-}
-
-.pub-actions {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.btn-link, .btn-bib, .btn-action {
-    padding: 0.4rem 0.8rem;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: transparent;
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-    cursor: pointer;
-    text-decoration: none;
-    font-family: var(--font-mono);
-    transition: all 0.2s;
-}
-
-.btn-link:hover, .btn-bib:hover, .btn-action:hover {
-    background: var(--border);
-    color: var(--text-primary);
-}
-
-.bibtex-hidden {
-    display: none;
-    width: 100%;
-    margin-top: 1rem;
-    background: #0d1117;
-    padding: 1rem;
-    border-radius: 6px;
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: #8b949e;
-    white-space: pre-wrap;
-    border: 1px solid var(--border);
-}
-
-/* --- Minimal Contact Section --- */
-.contact-minimal {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border);
-}
-
-.contact-minimal h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin: 0;
-    /* Remove the default border-bottom from .section-title since this is minimal */
-    border-bottom: none; 
-    padding-bottom: 0;
-}
-
-.btn-contact {
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0.6rem 1.5rem;
-    border: 1px solid var(--border);
-    border-radius: 50px;
-    transition: all 0.2s ease;
-    background: transparent;
-}
-
-.btn-contact:hover {
-    border-color: var(--accent);
-    background: rgba(88, 166, 255, 0.1);
-    color: var(--accent-hover);
-}
-
-.footer {
-    margin-top: 4rem;
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-}
-
-/* --- Static Page Specifics --- */
-.paper-title-large {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-}
-
-.paper-meta {
-    margin-bottom: 2rem;
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-}
-
-.paper-actions-row {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.abstract-card {
-    margin-top: 2rem;
-}
-
-.abstract-card h3 {
-    margin-bottom: 1rem;
-    font-family: var(--font-mono);
-    color: var(--accent);
-}
-
-/* --- Mobile Responsive --- */
-/* Trigger mobile view at 900px because the sidebar is wide */
-@media (max-width: 900px) {
-    .container {
-        flex-direction: column;
-    }
-    
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        padding: 3rem 1rem;
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-    }
-
-    .content {
-        margin-left: 0;
-        padding: 2rem 1.5rem; /* Reset padding for mobile */
-    }
-    
-    .profile-img-container {
-        width: 200px; /* Resize image for mobile */
-        height: 200px;
-    }
-
-    .contact-minimal {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-}
-
-/* Header Icon Styling */
-.header-icon-link {
-    font-size: 1.2rem; /* Slightly smaller than the main text */
-    margin-left: 15px;
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.2s ease;
-    vertical-align: middle;
-}
-
-.header-icon-link:hover {
-    color: var(--accent); /* Turns blue on hover */
-    transform: scale(1.1); /* Subtle pop effect */
-    display: inline-block;
-}
-
-/* --- Experience Section Styling --- */
-.experience-card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    margin-bottom: 1.5rem;
-    transition: transform 0.2s, border-color 0.2s;
-}
-
-.experience-card:hover {
-    border-color: var(--accent);
-    transform: translateX(5px); /* Subtle slide effect */
-}
-
-.exp-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.8rem;
-    flex-wrap: wrap;
-}
-
-.exp-logo {
-    width: 45px;
-    height: 45px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: var(--accent);
-}
-
-.exp-info {
-    flex: 1;
-    min-width: 200px;
-}
-
-.exp-info h3 {
-    font-size: 1.1rem;
-    margin: 0;
-    color: var(--text-primary);
-}
-
-.exp-role {
-    font-size: 0.95rem;
-    color: var(--accent);
-    margin: 0;
-}
-
-.exp-date {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    background: rgba(255, 255, 255, 0.05);
-    padding: 0.3rem 0.6rem;
-    border-radius: 4px;
-}
-
-.exp-desc {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    margin: 0;
-    padding-left: 60px; /* Aligns text with the content, skipping logo */
-}
-
-/* Mobile adjust for experience */
-@media (max-width: 768px) {
-    .exp-desc {
-        padding-left: 0;
-        margin-top: 0.5rem;
-    }
-    
-    .exp-header {
-        align-items: flex-start;
-    }
-}
-
-/* --- Compact Experience & Education --- */
-.compact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 2rem;
-}
-
-.col-title {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    color: var(--accent);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.compact-item {
-    margin-bottom: 1.5rem;
-    padding-left: 1rem;
-    border-left: 2px solid var(--border);
-    transition: border-color 0.2s;
-}
-
-.compact-item:hover {
-    border-left-color: var(--accent);
-}
-
-.compact-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.2rem;
-}
-
-.compact-role {
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--text-primary);
-}
-
-.compact-date {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-}
-
-.compact-inst {
-    font-size: 0.95rem;
-    color: var(--accent); /* Highlights the Company/University Name */
-    margin-bottom: 0.2rem;
-}
-
-.compact-desc {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin: 0;
-    line-height: 1.4;
-}
-
-/* Mobile: Stack them vertically */
-@media (max-width: 768px) {
-    .compact-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-}
-
-/* Link Styling for Talk Venues */
-.venue-link {
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.venue-link:hover {
-    color: var(--accent);
-    text-decoration: underline;
-}
-
-/* Invited Talks List - Alignment Fix */
-.talks-list {
-    padding-left: 1.5rem; /* Shifts the bullets to the right */
-    margin-top: 0.5rem;
-}
-
-/* Custom Scrollbar for Sidebar */
-.sidebar::-webkit-scrollbar {
-    width: 8px;
-}
-
-.sidebar::-webkit-scrollbar-track {
-    background: var(--bg-color);
-}
-
-.sidebar::-webkit-scrollbar-thumb {
-    background-color: var(--border);
-    border-radius: 4px;
-    border: 2px solid var(--bg-color);
-}
-
-.sidebar::-webkit-scrollbar-thumb:hover {
-    background-color: var(--text-secondary);
-}
-/* Optional: Adds space between the list items */
-.talk-item {
-    margin-bottom: 0.5rem;
-}
-
-/* --- New Top-Nav Layout --- */
-
-/* 1. Reset Container */
-.container {
-    display: block; /* Removed flex */
-    max-width: 100%;
-}
-
-/* 2. Top Navigation Bar */
+/* --- Top Navigation Bar --- */
 .navbar {
     position: fixed;
     top: 0;
@@ -651,71 +68,16 @@ body {
     color: var(--accent);
 }
 
-/* 3. Hero Section (Identity) */
-.hero {
-    padding-top: 90px; /* Space for navbar */
-    padding-bottom: 0.5rem;
-    text-align: center;
-    background: radial-gradient(circle at center top, #1c2128 0%, var(--bg-color) 70%);
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-/* Ensure Profile Image centers correctly */
-.profile-img-container {
-    margin: 0 auto 1.5rem auto; /* Centers the circle */
-    width: 250px; /* Good size for hero */
-    height: 250px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-}
-
-.role {
-    font-size: 1.2rem;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-}
-
-.role-sub {
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-}
-
-.social-links {
-    justify-content: center;
-    margin-bottom: 0;
-}
-
-/* 4. Main Content Area */
-.main-container {
-    max-width: 1300px; /* The "Reading Sweet Spot" */
+/* --- Main Layout Container --- */
+.container, .main-container {
+    display: block;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 1rem 2rem;
+    min-height: 100vh;
 }
 
-/* Mobile Responsiveness for Nav */
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none; /* Hide links on very small screens for simplicity, or add a hamburger menu later */
-    }
-    .hero {
-        padding-top: 100px;
-    }
-    .profile-img-container {
-        width: 180px;
-        height: 180px;
-    }
-}
-
-/* --- Split Intro Section --- */
+/* --- Split Intro Section (Hero + About) --- */
 .intro-section {
     padding-top: 120px; /* Space for fixed navbar */
     padding-bottom: 3rem;
@@ -727,13 +89,13 @@ body {
     display: grid;
     grid-template-columns: 350px 1fr; /* Fixed width for profile, rest for text */
     gap: 4rem;
-    align-items: start; /* Aligns to top so bio text flows naturally */
+    align-items: start;
 }
 
-/* Left Column Styling */
+/* Left Column: Identity */
 .intro-profile {
     text-align: center;
-    position: sticky; /* Optional: Keeps photo in view if bio is very long */
+    position: sticky;
     top: 100px;
 }
 
@@ -741,80 +103,378 @@ body {
     width: 220px;
     height: 220px;
     margin: 0 auto 1.5rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--card-bg);
+    border: 4px solid var(--accent);
+}
+
+.intro-profile .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .intro-profile h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
+    font-weight: 700;
 }
 
-/* Right Column Styling */
+.role {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.role-sub {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
+/* Right Column: Bio */
 .intro-bio {
     flex: 1;
 }
 
 .bio-card {
-    border: none;       /* Removes border for a cleaner look */
-    background: none;   /* Removes background color so it blends in */
-    padding: 0;         /* Removes padding so it aligns with headers */
+    border: none;
+    background: none;
+    padding: 0;
 }
 
 .bio-card p {
-    font-size: 1.05rem; /* Slightly larger text for readability */
+    font-size: 1.05rem;
     color: #c9d1d9;
+    margin-bottom: 1rem;
 }
 
-/* Mobile: Stack them */
+.bio-card strong {
+    color: var(--text-primary);
+}
+
+.bio-card a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* --- General Sections --- */
+.section {
+    margin-bottom: 5rem;
+    scroll-margin-top: 6rem; /* Ensures navbar doesn't cover heading */
+}
+
+.section-title {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+/* --- Research Interests Grid --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.grid-item {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.grid-item i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.grid-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.grid-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* --- Publications (Scrollable Box + Overflow Fix) --- */
+#publication-list {
+    max-height: 600px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+}
+
+#publication-list::-webkit-scrollbar { width: 8px; }
+#publication-list::-webkit-scrollbar-track { background: transparent; }
+#publication-list::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    border-radius: 4px;
+    border: 2px solid var(--bg-color);
+}
+#publication-list::-webkit-scrollbar-thumb:hover { background-color: var(--text-secondary); }
+
+.pub-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.pub-content {
+    flex: 1;
+    min-width: 0; /* CRITICAL: Allows text to wrap */
+}
+
+.pub-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-primary);
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.pub-title-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.pub-title-link:hover { color: var(--accent); }
+
+.authors {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.3rem;
+    overflow-wrap: break-word;
+}
+
+.venue {
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-style: italic;
+}
+
+.pub-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.btn-link, .btn-bib, .btn-action {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    transition: all 0.2s;
+}
+
+.btn-link:hover, .btn-bib:hover, .btn-action:hover {
+    background: var(--border);
+    color: var(--text-primary);
+}
+
+.bibtex-hidden {
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+    background: #0d1117;
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: #8b949e;
+    white-space: pre-wrap;
+    border: 1px solid var(--border);
+}
+
+/* --- Experience Cards --- */
+.experience-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.experience-card:hover {
+    border-color: var(--accent);
+    transform: translateX(5px);
+}
+
+.exp-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.exp-logo {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.exp-info { flex: 1; min-width: 200px; }
+.exp-info h3 { font-size: 1.1rem; margin: 0; color: var(--text-primary); }
+.exp-role { font-size: 0.95rem; color: var(--accent); margin: 0; }
+.exp-date {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+}
+.exp-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0;
+    padding-left: 60px;
+}
+
+/* --- Talks List --- */
+.talks-list {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+.talk-item { margin-bottom: 0.5rem; }
+
+.venue-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.venue-link:hover { color: var(--accent); text-decoration: underline; }
+
+/* --- Contact & Footer --- */
+.contact-minimal {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.btn-contact {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    transition: all 0.2s ease;
+}
+
+.btn-contact:hover {
+    border-color: var(--accent);
+    background: rgba(88, 166, 255, 0.1);
+}
+
+.footer {
+    margin-top: 4rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+/* --- Mobile Responsive --- */
 @media (max-width: 900px) {
+    .nav-menu { display: none; } /* Add hamburger later if needed */
+    
     .intro-container {
-        grid-template-columns: 1fr; /* Stack vertically */
+        grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
     }
     
     .intro-profile {
-        position: static; /* Disable sticky on mobile */
+        position: static;
         border-bottom: 1px solid var(--border);
         padding-bottom: 2rem;
     }
-
-    .intro-bio {
-        text-align: left; /* Keep text readable */
+    
+    .intro-bio { text-align: left; }
+    
+    .exp-desc { padding-left: 0; margin-top: 0.5rem; }
+    
+    .contact-minimal {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
     }
 }
 
-/* --- Scrollable Publications Box --- */
-#publication-list {
-    max-height: 600px;       /* Adjust this height as you like */
-    overflow-y: auto;        /* Enables vertical scrolling */
-    
-    /* Optional: Adds a border and background to make it look like a "box" */
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;         /* Space inside the box */
-    
-    /* Optional: Inner shadow for depth */
-    box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+@media (max-width: 600px) {
+    .pub-card { flex-direction: column; gap: 1rem; }
+    .pub-actions { width: 100%; justify-content: flex-start; }
 }
 
-/* Custom Scrollbar for Publications (Matches your theme) */
-#publication-list::-webkit-scrollbar {
-    width: 8px;
-}
-
-#publication-list::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 12px;
-}
-
-#publication-list::-webkit-scrollbar-thumb {
-    background-color: var(--border);
-    border-radius: 4px;
-    border: 2px solid var(--bg-color); /* Creates padding around thumb */
-}
-
-#publication-list::-webkit-scrollbar-thumb:hover {
-    background-color: var(--text-secondary);
-}
+/* --- Publication Sub-Page Styles --- */
+.paper-title-large { font-size: 2rem; margin-bottom: 1rem; color: var(--text-primary); }
+.paper-meta { margin-bottom: 2rem; color: var(--text-secondary); font-size: 1.1rem; }
+.paper-actions-row { display: flex; gap: 1rem; margin-bottom: 2rem; }
+.abstract-card { margin-top: 2rem; }
+.abstract-card h3 { margin-bottom: 1rem; font-family: var(--font-mono); color: var(--accent); }
