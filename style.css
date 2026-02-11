@@ -500,7 +500,7 @@ body {
     padding: 2rem 0;           /* Vertical spacing only */
     border: none;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
     border-radius: 0;
 }
 
