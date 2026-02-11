@@ -240,10 +240,10 @@ body {
 #publication-list {
     max-height: 600px;
     overflow-y: auto;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 0rem;
     box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
 }
 
@@ -257,16 +257,18 @@ body {
 #publication-list::-webkit-scrollbar-thumb:hover { background-color: var(--text-secondary); }
 
 .pub-card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    margin-bottom: 1rem;
+    background: transparent;
+    border: none;                /* No individual border */
+    border-bottom: 1px solid var(--border); /* Just a separator line */
+    border-radius: 0;            /* Rounded corners */    
+    margin-bottom: 0;            /* Gap between items */
+    padding: 1.5rem;    
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 1.5rem;
     flex-wrap: wrap;
+    transition: background 0.2s; /* Smooth hover effect */
 }
 
 .pub-content {
