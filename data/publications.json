@@ -43,6 +43,7 @@
         "bibtex": "@article{li2025icquant,title={ICQuant: Index Coding enables Low-bit LLM Quantization},author={Li, Xinlin and Hanna, Osama and Fragouli, Christina and Diggavi, Suhas},journal={arXiv preprint arXiv:2505.00850},year={2025}}",
         "create_page": false
     },
+    /*
     {
         "id": "karakas2025maberasure",
         "title": "Does Feedback Help in Bandits with Arm Erasures?",
@@ -54,6 +55,7 @@
         "bibtex": "@article{karakas2025does,title={Does Feedback Help in Bandits with Arm Erasures?},author={Karakas, Merve and Hanna, Osama and Yang, Lin F and Fragouli, Christina},journal={arXiv preprint arXiv:2504.20894},year={2025}}",
         "create_page": true
     },
+    */
     {
         "id": "hanna2023contexts",
         "title": "Contexts can be Cheap: Solving Stochastic Contextual Bandits with Linear Bandit Algorithms",
