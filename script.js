@@ -35,6 +35,10 @@ async function loadPublications() {
 
         // Iterate directly through the JSON array (preserving your JSON order)
         papers.forEach((paper, index) => {
+            if (paper.hide_from_list) {
+                return; 
+            }
+            
             const uniqueBibId = `bib-${index}`;
             
             // Link Logic
