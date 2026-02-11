@@ -783,3 +783,38 @@ body {
         text-align: left; /* Keep text readable */
     }
 }
+
+/* --- Scrollable Publications Box --- */
+#publication-list {
+    max-height: 600px;       /* Adjust this height as you like */
+    overflow-y: auto;        /* Enables vertical scrolling */
+    
+    /* Optional: Adds a border and background to make it look like a "box" */
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;         /* Space inside the box */
+    
+    /* Optional: Inner shadow for depth */
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Custom Scrollbar for Publications (Matches your theme) */
+#publication-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#publication-list::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 12px;
+}
+
+#publication-list::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    border-radius: 4px;
+    border: 2px solid var(--bg-color); /* Creates padding around thumb */
+}
+
+#publication-list::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-secondary);
+}
