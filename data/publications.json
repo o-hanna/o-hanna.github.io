@@ -53,7 +53,7 @@
         "pdf_link": "publications/pdfs/merve2025.pdf",
         "bibtex": "@article{karakas2025does,title={Does Feedback Help in Bandits with Arm Erasures?},author={Karakas, Merve and Hanna, Osama and Yang, Lin F and Fragouli, Christina},journal={arXiv preprint arXiv:2504.20894},year={2025}}",
         "create_page": true,
-        "hidden": true
+        "hide_from_list": true
     },
     {
         "id": "hanna2023contexts",
