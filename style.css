@@ -488,7 +488,7 @@ body {
 
 .experience-card {
     background: transparent;
-    padding: 0.5rem 0;           /* Vertical spacing only */
+    padding: 1rem 0;           /* Vertical spacing only */
     border: none;
     border-bottom: 1px solid var(--border);
     margin-bottom: 0;
@@ -503,7 +503,7 @@ body {
 
 /* Reduce gap between Experience and Education */
 #experience {
-    margin-bottom: 1rem; 
+    margin-bottom: 2rem; 
 }
 
 /* Pull items closer to the header */
