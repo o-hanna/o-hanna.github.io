@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Does Feedback Help in Bandits with Arm Erasures?</title>
+    
+    <meta name="citation_title" content="Does Feedback Help in Bandits with Arm Erasures?">
+    <meta name="citation_author" content="Merve Karakas; Osama Hanna; Lin F. Yang; Christina Fragouli">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_conference_title" content="IEEE International Symposium on Information Theory (ISIT)">
+    <meta name="description" content="We study a distributed multi-armed bandit (MAB) problem over arm erasure channels, motivated by the increasing adoption of MAB algorithms over communication-con...">
+            
+    <meta name="citation_pdf_url" content="https://o-hanna.github.io/publications/pdfs/merve2025.pdf">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Home</a>
+            
+            <div class="nav-menu">
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#research" class="nav-link">Research</a>
+                <a href="../index.html#publications" class="nav-link">Publications</a>
+                <a href="../index.html#talks" class="nav-link">Talks</a>
+                <a href="../index.html#service" class="nav-link">Service</a>
+                <a href="../index.html#experience" class="nav-link">Experience</a>
+                <a href="../index.html#education" class="nav-link">Education</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container" style="padding-top: 90px; min-height: 80vh;">
+        <div class="section">
+            <h2 class="paper-title-large">Does Feedback Help in Bandits with Arm Erasures?</h2>
+            
+            <p class="paper-meta">
+                <span class="paper-authors">Merve Karakas, Osama Hanna, Lin F. Yang, Christina Fragouli</span>
+                <br>
+                <span class="paper-venue">IEEE International Symposium on Information Theory (ISIT) (2025)</span>
+            </p>
+            
+            <div class="paper-actions-row">
+                <a href="pdfs/merve2025.pdf" class="btn-action" target="_blank">Read PDF</a>
+                <button class="btn-action" onclick="toggleBibtex('bib-detail')">Cite</button>
+                <a href="../index.html#publications" class="btn-action">Back to List</a>
+            </div>
+
+            <div id="bib-detail" class="bibtex-hidden">@article{karakas2025does,title={Does Feedback Help in Bandits with Arm Erasures?},author={Karakas, Merve and Hanna, Osama and Yang, Lin F and Fragouli, Christina},journal={arXiv preprint arXiv:2504.20894},year={2025}}</div>
+
+            <div class="card abstract-card">
+                <h3>Abstract</h3>
+                <p>We study a distributed multi-armed bandit (MAB) problem over arm erasure channels, motivated by the increasing adoption of MAB algorithms over communication-constrained networks. In this setup, the learner communicates the chosen arm to play to an agent over an erasure channel with probability ε ∈ [0,1); if an erasure occurs, the agent continues pulling the last successfully received arm; the learner always observes the reward of the arm pulled. In past work, we considered the case where the agent cannot convey feedback to the learner, and thus the learner does not know whether the arm played is the requested or the last successfully received one. In this paper, we instead consider the case where the agent can send feedback to the learner on whether the arm request was received, and thus the learner exactly knows which arm was played. Surprisingly, we prove that erasure feedback does not improve the worst-case regret upper bound order over the previously studied no-feedback setting. In particular, we prove a regret lower bound of Ω(√(KT) + K/(1-ε)), where K is the number of arms and T the time horizon, that matches no-feedback lower bound exactly and upper bound (up to logarithmic factors). We note however that the availability of feedback does enable the design of simpler algorithms that may achieve better constants (albeit not better order) regret bounds; we design one such algorithm, and numerically evaluate its performance.</p>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>&copy; 2026 Osama Hanna.</p>
+        </footer>
+    </main>
+
+    <script>
+        function toggleBibtex(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

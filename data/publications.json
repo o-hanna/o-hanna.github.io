@@ -1,0 +1,91 @@
+[
+    {
+        "id": "shen2026gsrm",
+        "title": "GSRM: Generative Speech Reward Model for Speech RLHF",
+        "authors": ["Maohao Shen", "Tejas Jayashankar", "Osama Hanna", "et al."],
+        "venue": "Preprint",
+        "year": 2026,
+        "abstract": "",
+        "pdf_link": "https://arxiv.org/abs/2602.13891",
+        "bibtex": "",
+        "create_page": false
+    },
+    {
+        "id": "wang2026vowelprompt",
+        "title": "VowelPrompt: Hearing Speech Emotions from Text via Vowel-level Prosodic Augmentation",
+        "authors": ["Yancheng Wang", "Osama Hanna", "et al."],
+        "venue": "The International Conference on Learning Representations (ICLR)",
+        "year": 2026,
+        "abstract": "",
+        "pdf_link": "https://arxiv.org/pdf/2602.06270v1",
+        "bibtex": "",
+        "create_page": false
+    },
+    {
+        "id": "buyukkalayci2026areduction",
+        "title": "A Reduction Algorithm for Markovian Contextual Linear Bandits",
+        "authors": ["Kaan Buyukkalayci", "Osama Hanna", "Christina Fragouli"],
+        "venue": "Preprint",
+        "year": 2026,
+        "abstract": "",
+        "pdf_link": "publications/pdfs/Markovian_Contexts_Cheap.pdf",
+        "bibtex": "",
+        "create_page": false
+    },
+    {
+        "id": "li2025icquant",
+        "title": "ICQuant: Index Coding enables Low-bit LLM Quantization",
+        "authors": ["Xinlin Li", "Osama Hanna", "Christina Fragouli", "Suhas Diggavi"],
+        "venue": "Conference on Language Modeling (COLM)",
+        "year": 2025,
+        "abstract": "",
+        "pdf_link": "https://arxiv.org/pdf/2505.00850",
+        "bibtex": "@article{li2025icquant,title={ICQuant: Index Coding enables Low-bit LLM Quantization},author={Li, Xinlin and Hanna, Osama and Fragouli, Christina and Diggavi, Suhas},journal={arXiv preprint arXiv:2505.00850},year={2025}}",
+        "create_page": false
+    },
+    {
+        "id": "karakas2025maberasure",
+        "title": "Does Feedback Help in Bandits with Arm Erasures?",
+        "authors": ["Merve Karakas", "Osama Hanna", "Lin F. Yang", "Christina Fragouli"],
+        "venue": "IEEE International Symposium on Information Theory (ISIT)",
+        "year": 2025,
+        "abstract": "We study a distributed multi-armed bandit (MAB) problem over arm erasure channels, motivated by the increasing adoption of MAB algorithms over communication-constrained networks. In this setup, the learner communicates the chosen arm to play to an agent over an erasure channel with probability ε ∈ [0,1); if an erasure occurs, the agent continues pulling the last successfully received arm; the learner always observes the reward of the arm pulled. In past work, we considered the case where the agent cannot convey feedback to the learner, and thus the learner does not know whether the arm played is the requested or the last successfully received one. In this paper, we instead consider the case where the agent can send feedback to the learner on whether the arm request was received, and thus the learner exactly knows which arm was played. Surprisingly, we prove that erasure feedback does not improve the worst-case regret upper bound order over the previously studied no-feedback setting. In particular, we prove a regret lower bound of Ω(√(KT) + K/(1-ε)), where K is the number of arms and T the time horizon, that matches no-feedback lower bound exactly and upper bound (up to logarithmic factors). We note however that the availability of feedback does enable the design of simpler algorithms that may achieve better constants (albeit not better order) regret bounds; we design one such algorithm, and numerically evaluate its performance.",
+        "pdf_link": "publications/pdfs/merve2025.pdf",
+        "bibtex": "@article{karakas2025does,title={Does Feedback Help in Bandits with Arm Erasures?},author={Karakas, Merve and Hanna, Osama and Yang, Lin F and Fragouli, Christina},journal={arXiv preprint arXiv:2504.20894},year={2025}}",
+        "create_page": true,
+        "hide_from_list": true
+    },
+    {
+        "id": "hanna2023contexts",
+        "title": "Contexts can be Cheap: Solving Stochastic Contextual Bandits with Linear Bandit Algorithms",
+        "authors": ["Osama Hanna", "Lin F. Yang", "Christina Fragouli"],
+        "venue": "Conference on Learning Theory (COLT)",
+        "year": 2023,
+        "abstract": "",
+        "pdf_link": "https://proceedings.mlr.press/v195/hanna23a/hanna23a.pdf",
+        "bibtex": "@inproceedings{hanna2023contexts,title={Contexts can be cheap: Solving stochastic contextual bandits with linear bandit algorithms},author={Hanna, Osama A and Yang, Lin and Fragouli, Christina},booktitle={The Thirty Sixth Annual Conference on Learning Theory},pages={1791--1821},year={2023},organization={PMLR}}",
+        "create_page": false
+    },
+    {
+        "id": "hanna2023efficient",
+        "title": "Efficient Batched Algorithm for Contextual Linear Bandits with Large Action Space via Soft Elimination",
+        "authors": ["Osama Hanna", "Lin F. Yang", "Christina Fragouli"],
+        "venue": "The Annual Conference on Neural Information Processing Systems (NeurIPS)",
+        "year": 2023,
+        "abstract": "",
+        "pdf_link": "https://proceedings.neurips.cc/paper_files/paper/2023/file/b1bdb0f22c9748203c62f29aa297ac57-Paper-Conference.pdf",
+        "bibtex": "@article{hanna2023efficient,title={Efficient batched algorithm for contextual linear bandits with large action space via soft elimination},author={Hanna, Osama and Yang, Lin and Fragouli, Christina},journal={Advances in Neural Information Processing Systems},volume={36},pages={56772--56783},year={2023}}",
+        "create_page": false
+    },
+    {
+        "id": "hanna2024privacy",
+        "title": "Differentially Private Stochastic Linear Bandits: (Almost) for Free",
+        "authors": ["Osama Hanna", "Antonious M. Girgis", "Christina Fragouli", "Suhas Diggavi"],
+        "venue": "IEEE Journal on Selected Areas in Information Theory (JSAIT)",
+        "year": 2024,
+        "abstract": "",
+        "pdf_link": "publications/pdfs/private_bandits_jsait24.pdf",
+        "bibtex": "@article{hanna2024differentially, title={Differentially private stochastic linear bandits:(almost) for free}, author={Hanna, Osama and Girgis, Antonious M and Fragouli, Christina and Diggavi, Suhas}, journal={IEEE Journal on Selected Areas in Information Theory}, volume={5}, pages={135--147}, year={2024}, publisher={IEEE} }",
+        "create_page": false
+    }
+]

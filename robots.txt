@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /publications/pdfs/
+Allow: /publications/
+
+Sitemap: https://username.github.io/sitemap.xml
