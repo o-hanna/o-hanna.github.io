@@ -532,16 +532,20 @@ body {
     text-align: center; /* Centers the icon and text inside each column */
 }
 
-.research-item i {
-    font-size: 2.2rem; /* Makes the icons beautifully prominent */
-    color: #4a90e2; /* A nice professional blue accent color */
-    margin-bottom: 15px;
-}
-
 .research-item h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Keeps the title and icon centered in the column */
+    gap: 10px; /* Space between the icon and the text */
     font-size: 1.1rem;
     margin: 0 0 10px 0;
     color: #ffffff;
+}
+
+.research-item i {
+    font-size: 1.4rem; /* Scaled down slightly to look balanced inline */
+    color: #4a90e2;
+    margin-bottom: 0; /* Removed the old bottom margin */
 }
 
 .research-item p {
